@@ -1,0 +1,88 @@
+{
+  "info": {
+    "name": "Minesweeper API",
+    "_postman_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "description": "Koleksi API untuk game Minesweeper",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Game",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"n\": 4,\n    \"mines\": 3\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/games",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "games"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Game",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/games/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "games",
+            ":id"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reveal Cell",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"row\": 1,\n    \"col\": 1\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/games/:id/reveal",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "games",
+            ":id",
+            "reveal"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
